@@ -3,7 +3,7 @@ import jakarta.persistence.*
 import java.util.*
 
 @Entity
-data class ExternalTransaction(
+data class Transaction(
     @Id
     val id: UUID = UUID.randomUUID(),
     val fromCvu: String,
