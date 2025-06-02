@@ -21,13 +21,13 @@ class ApiController(
     private val accountRepository: AccountRepository,
     private val transactionRepository: TransactionRepository
 ) {
-    @GetMapping("/wallet/validate")
+    @GetMapping("/wallet/validate-cvu")
     fun validateCvu(@RequestBody request: ExternalCvuValidationRequest): ResponseEntity<CvuValidationResponseDTO>{
         val wallet = accountRepository.findById(request.cvu.toString())
         return ResponseEntity.ok(CvuValidationResponseDTO(valid = wallet.isPresent))
     }
 
-    @PostMapping("/wallet/validate-balance")
+    @PostMapping("/wallet/validate-deposit")
     fun validateExternalCvuBalance(@RequestBody request: ExternalBalanceValidationRequest): ResponseEntity<ExternalWalletValidationDTO> {
         val cvuString = request.cvu.toString()
         val account = accountRepository.findById(cvuString)
