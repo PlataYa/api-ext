@@ -1,0 +1,12 @@
+package com.plataya.external_api.model.entity
+import jakarta.persistence.*
+import java.util.*
+
+@Entity
+data class Transaction(
+    @Id
+    val id: UUID = UUID.randomUUID(),
+    val fromCvu: String,
+    val toCvu: String,
+    val amount: Double
+)
