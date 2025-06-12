@@ -25,7 +25,7 @@ class ApiController(
     }
 
     @PostMapping("/wallet/validate-cvu")
-    fun validateExternalCvu(@RequestBody request: ExternalCvuValidationRequest): ResponseEntity<ExternalWalletValidationDTO> {
+    fun validateExternalCvu(@RequestBody request: ExternalCvuValidationRequest): ResponseEntity<ExternalCvuValidationDTO> {
         val result = cvuValidationService.validateCvu(request)
         return if (result.exists) {
             ResponseEntity.ok(result)
