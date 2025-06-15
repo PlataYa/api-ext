@@ -18,7 +18,7 @@ class InMemoryWalletService {
         accounts["222"] = Account("222", 2500.00, "Banco Galicia")
         accounts["333"] = Account("333", 750.25, "Banco Santander")
         accounts["444"] = Account("444", 50.00, "Banco BBVA")
-        accounts["555"] = Account("555", 10000.00, "Banco Macro")
+        accounts["555"] = Account("555", 1000000000.00, "Banco Macro")
         accounts["999"] = Account("999", 5000.00, "External Bank")
         
         println("Initialized ${accounts.size} test accounts:")
