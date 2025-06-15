@@ -18,7 +18,7 @@ class InMemoryWalletService {
         accounts["200000000002"] = Account("200000000002", 2500.00, "Banco Galicia")
         accounts["200000000003"] = Account("200000000003", 750.25, "Banco Santander")
         accounts["200000000004"] = Account("200000000004", 50.00, "Banco BBVA")
-        accounts["200000000005"] = Account("200000000005", 10000.00, "Banco Macro")
+        accounts["200000000005"] = Account("200000000005", 1000000000.00, "Banco Macro")
         accounts["200000000006"] = Account("200000000006", 5000.00, "External Bank")
         
         println("Initialized ${accounts.size} test accounts:")
