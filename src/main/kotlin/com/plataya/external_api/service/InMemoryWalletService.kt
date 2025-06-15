@@ -14,12 +14,12 @@ class InMemoryWalletService {
     @EventListener(ApplicationReadyEvent::class)
     fun initializeAccounts() {
         // Initialize some test accounts with balances
-        accounts["111"] = Account("111", 1500.75, "Banco Nación")
-        accounts["222"] = Account("222", 2500.00, "Banco Galicia")
-        accounts["333"] = Account("333", 750.25, "Banco Santander")
-        accounts["444"] = Account("444", 50.00, "Banco BBVA")
-        accounts["555"] = Account("555", 1000000000.00, "Banco Macro")
-        accounts["999"] = Account("999", 5000.00, "External Bank")
+        accounts["200000000001"] = Account("200000000001", 1500.75, "Banco Nación")
+        accounts["200000000002"] = Account("200000000002", 2500.00, "Banco Galicia")
+        accounts["200000000003"] = Account("200000000003", 750.25, "Banco Santander")
+        accounts["200000000004"] = Account("200000000004", 50.00, "Banco BBVA")
+        accounts["200000000005"] = Account("200000000005", 10000.00, "Banco Macro")
+        accounts["200000000006"] = Account("200000000006", 5000.00, "External Bank")
         
         println("Initialized ${accounts.size} test accounts:")
         accounts.values.forEach { account ->
